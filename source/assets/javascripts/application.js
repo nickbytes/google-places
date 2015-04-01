@@ -42,14 +42,21 @@
       console.log('Status OK');
       for (var i = 0; i < results.length; i++) {
         console.log(results[i].name);
-        items.push('<li>' + results[i].name + '</li>')
+        items.push('<li>' + results[i].name + '</li>');
       }
     } else {
-      console.log('Status: ' + status);
+      items.push('<li>No results found, sorry.</li>');
     }
 
     console.log(list);
+    // empty the list in case this is a new search
+    list.empty();
+    // add list items
     list.append( items.join('') );
+  }
+
+  function codeAddress() {
+    
   }
 
   $('.place__search').click(makeRequest);

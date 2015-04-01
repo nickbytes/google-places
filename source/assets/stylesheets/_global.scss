@@ -3,24 +3,38 @@ body {
   color: $medium-gray;
 }
 
+/**
+* Section
+**/
+.section__title{
+  text-transform: uppercase;
+}
+
 .search{
   padding: 1em;
 
   @include media(800px){
-    width: 50%;
+    width: 30%;
     float: left;
   }
 
-  .sentence, .place__type,
-  .place__location {
-    display: inline;
+  .sentence{
+    font-size: 40px
   }
 }
 
 #map-canvas{
   @include media(800px){
-    width: 50%;
+    width: 70%;
     float: right;
     height: 800px;
   }
+}
+
+/**
+* Results Section
+**/
+.place__results{
+  margin: 50px 0;
+  border-top: 2px solid $medium-gray;
 }

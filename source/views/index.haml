@@ -11,17 +11,18 @@
 
   %body
     %section.search
-      %p.sentence
+      %h1.sentence
         I'm looking for a
-      %input.place__type{:placeholder => 'Cafe'}
+      %input.place__type{:placeholder => 'cafe, park, etc'}
 
-      %p.sentence
-        near
+      %h1.sentence
+        in
       %input.place__location{:placeholder => 'San Francisco'}
 
       %button.place__search Search
 
       .place__results
+        %h3.section__title Results
         %ul.places__ul
 
     %div#map-canvas
