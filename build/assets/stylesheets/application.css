@@ -552,36 +552,9 @@ body {
   background-color: #ddd;
   color: #999; }
 
-.delete-me {
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  box-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  -ms-flex-align: center;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  box-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  height: 100vh; }
-  .delete-me .container {
-    text-align: center; }
-    .delete-me .container h1 {
-      font-weight: 200; }
+html, body, #map-canvas {
+  height: 100%;
+  margin: 0px;
+  padding: 0px; }
 
 /*# sourceMappingURL=application.css.map */

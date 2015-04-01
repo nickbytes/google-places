@@ -3,17 +3,8 @@ body {
   color: $medium-gray;
 }
 
-.delete-me {
-  @include align-items(center);
-  @include display(flex);
-  @include justify-content(center);
-  height: 100vh;
-
-  .container {
-    text-align: center;
-
-    h1 {
-      font-weight: 200;
-    }
-  }
+html, body, #map-canvas {
+  height: 100%;
+  margin: 0px;
+  padding: 0px
 }

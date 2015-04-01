@@ -7,14 +7,16 @@
 
     %title Google Places API
     %link{href: "assets/stylesheets/application.css", rel: "stylesheet", type: "text/css"}
+    %script{src: "https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places", type: "text/javascript"}
 
   %body
-    .container
-      %h1 Proteus
-      %p
-        You're all set!
-        <a href="http://github.com/thoughtbot/proteus-node">Let's get started</a>
-        building your prototype.
+    %div#map-canvas
+    -# .container
+    -#   %h1 I'm looking for
+    -#   %input.place__type{:placeholder => 'Coffee Shops'}
+    -#   %h1 in
+    -#   %input.place__city{:placeholder => 'San Francisco'}
+
 
     %script{src: "https://code.jquery.com/jquery-2.1.1.min.js", type: "text/javascript"}
     %script{src: "assets/javascripts/application.js", type: "text/javascript"}
