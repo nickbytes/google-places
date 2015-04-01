@@ -1,22 +1,16 @@
-# Proteus - Gulp, *Decaf*
+# Google Places API
 
-## About *Decaf* version
-[Proteus](http://github.com/thoughtbot/proteus) is a collection of useful
-starter kits to help you prototype faster made by the great people at [thoughtbot](http://thoughtbot.com). It follows the
-[thoughtbot styleguide](https://github.com/thoughtbot/guides) and includes their
-favorite front end tools.
+Requirements
+------------
+* Provides query box and search button, then calls Google Places API
+* Formats the results to give a good user experience
 
-But I don't typically use [Coffeescript](http://coffeescript.org). I've got nothing against it, I just don't know it well enough to be productive.
-
-This version uses Javascript instead.
 
 Includes
 --------
 * [Gulp](http://gulpjs.com): Converts files and task running
 * [HAML](http://haml.info):
   Simple template markup
-* ~~[Coffeescript](http://coffeescript.org):
-  Write javascript with simpler syntax~~
 * *Javascript*
 * [Sass](http://sass-lang.com):
   CSS with superpowers
