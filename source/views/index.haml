@@ -10,6 +10,20 @@
     %script{src: "https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places", type: "text/javascript"}
 
   %body
+    %section.search
+      %p.sentence
+        I'm looking for a
+      %input.place__type{:placeholder => 'Cafe'}
+
+      %p.sentence
+        near
+      %input.place__location{:placeholder => 'San Francisco'}
+
+      %button.place__search Search
+
+      .place__results
+        %ul.places__ul
+
     %div#map-canvas
     -# .container
     -#   %h1 I'm looking for

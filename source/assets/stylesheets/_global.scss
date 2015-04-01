@@ -3,8 +3,24 @@ body {
   color: $medium-gray;
 }
 
-html, body, #map-canvas {
-  height: 100%;
-  margin: 0px;
-  padding: 0px
+.search{
+  padding: 1em;
+
+  @include media(800px){
+    width: 50%;
+    float: left;
+  }
+
+  .sentence, .place__type,
+  .place__location {
+    display: inline;
+  }
+}
+
+#map-canvas{
+  @include media(800px){
+    width: 50%;
+    float: right;
+    height: 800px;
+  }
 }

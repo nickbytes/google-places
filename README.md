@@ -2,6 +2,7 @@
 
 Requirements
 ------------
+* Create a web app (desktop or mobile)
 * Provides query box and search button, then calls Google Places API
 * Formats the results to give a good user experience
 
