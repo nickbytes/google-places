@@ -1,6 +1,6 @@
 body {
   background-color: $light-gray;
-  color: $medium-gray;
+  color: $dark-gray;
 }
 
 /**
@@ -37,4 +37,29 @@ body {
 .place__results{
   margin: 50px 0;
   border-top: 2px solid $medium-gray;
+}
+
+/**
+* Inputs
+**/
+input{
+  border-bottom: 2px dashed $dark-gray;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  box-shadow: none;
+  background: $light-gray;
+  width: 90%;
+  padding: 0 0 5px;
+  margin: 0 0 30px;
+
+
+  &:focus{
+    border-bottom: 2px dashed $dark-gray;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    box-shadow: none;
+    outline: none;
+  }
 }
