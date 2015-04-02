@@ -14,8 +14,11 @@ body {
   padding: 1em;
 
   @include media(800px){
+    position: absolute;
     width: 30%;
     float: left;
+    overflow: scroll;
+    height: 100%;
   }
 
   .sentence{
