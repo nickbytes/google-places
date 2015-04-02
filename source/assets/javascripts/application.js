@@ -2,6 +2,7 @@
 (function() {
 
   var map;
+  var infowindow;
 
   function initialize() {
     geocoder = new google.maps.Geocoder();
@@ -25,6 +26,7 @@
       types: [locationType]
     };
 
+    infowindow = new google.maps.InfoWindow();
     var service = new google.maps.places.PlacesService(map);
     service.nearbySearch(request, callback);
 
@@ -52,6 +54,7 @@
     if (status == google.maps.places.PlacesServiceStatus.OK) {
       for (var i = 0; i < results.length; i++) {
         items.push('<li>' + results[i].name + '</li>');
+        createMarker(results[i]);
       }
     } else {
       items.push('<li>No results found, sorry.</li>');
@@ -59,6 +62,19 @@
 
     list.empty();
     list.append( items.join('') );
+  }
+
+  function createMarker(place) {
+    var placeLoc = place.geometry.location;
+    var marker = new google.maps.Marker({
+      map: map,
+      position: place.geometry.location
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.setContent(place.name);
+      infowindow.open(map, this);
+    });
   }
 
   $('.place__search').click(codeAddress);
