@@ -583,6 +583,10 @@ body {
   margin: 50px 0;
   border-top: 2px solid #999; }
 
+.results__rating {
+  color: #999;
+  font-size: 11px; }
+
 /**
 * Inputs
 **/

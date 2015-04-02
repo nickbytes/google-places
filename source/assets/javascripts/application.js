@@ -53,11 +53,12 @@
     var list = $('.places__ul');
     if (status == google.maps.places.PlacesServiceStatus.OK) {
       for (var i = 0; i < results.length; i++) {
-        items.push('<li>' + results[i].name + '</li>');
+        console.log(results[i]);
+        items.push('<li class="results-success">' + results[i].name + '<span class="results__rating"> - rating: ' + results[i].rating + '</span></li>');
         createMarker(results[i]);
       }
     } else {
-      items.push('<li>No results found, sorry.</li>');
+      items.push('<li class="results-none">No results found, sorry.</li>');
     }
 
     list.empty();
