@@ -552,20 +552,32 @@ body {
   background-color: #ddd;
   color: #999; }
 
+/**
+* Section
+**/
+.section__title {
+  text-transform: uppercase; }
+
 .search {
   padding: 1em; }
   @media screen and (min-width: 800px) {
     .search {
-      width: 50%;
+      width: 30%;
       float: left; } }
-  .search .sentence, .search .place__type,
-  .search .place__location {
-    display: inline; }
+  .search .sentence {
+    font-size: 40px; }
 
 @media screen and (min-width: 800px) {
   #map-canvas {
-    width: 50%;
+    width: 70%;
     float: right;
     height: 800px; } }
+
+/**
+* Results Section
+**/
+.place__results {
+  margin: 50px 0;
+  border-top: 2px solid #999; }
 
 /*# sourceMappingURL=application.css.map */
