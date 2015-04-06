@@ -570,13 +570,19 @@ body {
   .search .sentence {
     font-size: 40px; }
 
-@media screen and (min-width: 800px) {
-  #map-canvas {
-    width: 70%;
-    float: right;
-    height: 800px; } }
-#map-canvas img {
-  max-width: none; }
+#map-canvas {
+  margin: 1em;
+  outline: 2px solid #33cc77;
+  height: 300px; }
+  @media screen and (min-width: 800px) {
+    #map-canvas {
+      padding: 0;
+      margin: 0;
+      width: 70%;
+      float: right;
+      height: 800px; } }
+  #map-canvas img {
+    max-width: none; }
 
 /**
 * Results Section
