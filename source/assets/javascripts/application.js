@@ -80,6 +80,12 @@
 
   $('.place__search').click(codeAddress);
 
+  $('.place__type, .place__location').keypress(function(e){
+    if (e.which == 13){
+      $('.place__search').click();
+    }
+  });
+
   google.maps.event.addDomListener(window, 'load', initialize);
 
 })();
