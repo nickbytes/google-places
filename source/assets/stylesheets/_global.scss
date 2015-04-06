@@ -33,6 +33,11 @@ body {
     float: right;
     height: 800px;
   }
+
+  img{
+    // Normalize breaks Google Maps styling
+    max-width: none;
+  }
 }
 
 /**
