@@ -40,7 +40,6 @@
     var address = $('.place__location').val();
     geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
-        console.log(results[0].geometry.location);
         return makeRequest(results[0].geometry.location);
       } else {
         console.log('Geocode was not successful for the following reason: ' + status);
@@ -53,8 +52,7 @@
     var list = $('.places__ul');
     if (status == google.maps.places.PlacesServiceStatus.OK) {
       for (var i = 0; i < results.length; i++) {
-        console.log(results[i]);
-        items.push('<li class="results-success">' + results[i].name + '<span class="results__rating"> - rating: ' + results[i].rating + '</span></li>');
+        items.push('<li class="results-success" data-id="'+results[i].id+'">' + results[i].name + '<span class="results__rating"> - rating: ' + results[i].rating + '</span></li>');
         createMarker(results[i]);
       }
     } else {
@@ -69,7 +67,8 @@
     var placeLoc = place.geometry.location;
     var marker = new google.maps.Marker({
       map: map,
-      position: place.geometry.location
+      position: place.geometry.location,
+      icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|33cc77'
     });
 
     google.maps.event.addListener(marker, 'click', function() {
@@ -78,8 +77,9 @@
     });
   }
 
+
   $('.place__search').click(codeAddress);
 
-  $(window).load(initialize);
+  google.maps.event.addDomListener(window, 'load', initialize);
 
 })();
