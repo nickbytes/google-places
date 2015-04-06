@@ -575,6 +575,8 @@ body {
     width: 70%;
     float: right;
     height: 800px; } }
+#map-canvas img {
+  max-width: none; }
 
 /**
 * Results Section
