@@ -573,14 +573,19 @@ body {
 #map-canvas {
   margin: 1em;
   outline: 2px solid #33cc77;
-  height: 300px; }
+  height: 300px;
+  position: relative; }
   @media screen and (min-width: 800px) {
     #map-canvas {
       padding: 0;
       margin: 0;
       width: 70%;
       float: right;
-      height: 800px; } }
+      position: absolute !important;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 30%; } }
   #map-canvas img {
     max-width: none; }
 

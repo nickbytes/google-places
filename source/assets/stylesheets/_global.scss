@@ -31,13 +31,18 @@ body {
   margin: 1em;
   outline: 2px solid $green;
   height: 300px;
+  position: relative;
 
   @include media(800px){
     padding: 0;
     margin: 0;
     width: 70%;
     float: right;
-    height: 800px;
+    position: absolute !important;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 30%;
   }
 
   img{
